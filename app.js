@@ -9,30 +9,43 @@ const results = document.getElementById('results');
 // initialize state
 let clicks = 3;
 let correctAnswer = Math.round(Math.random() * 20);
-console.log(correctAnswer);
 
 // set event listeners to update state and DOM
 guessButton.addEventListener('click', () => {
     clicks--;
-   console.log(clicks);
+    console.log(correctAnswer);
     if (checkIfCorrect(userInput.value, correctAnswer) === 'less than') {
         results.textContent = `The answer is less than that! You have ${clicks} tries left!`;
     };
+
     if (checkIfCorrect(userInput.value, correctAnswer) === 'greater than') {
         results.textContent = `The answer is greater than that! You have ${clicks} tries left!`;
     };
+
     if (checkIfCorrect(userInput.value, correctAnswer) === 'equal') {
+        guessButton.disabled = true;
+        guessButton.style.display = 'none';
         results.textContent = 'Great Job! You win!';
     };
-    if (clicks <= 0) {
+
+    if (clicks < 1) {
         guessButton.disabled = true;
+        guessButton.style.display = 'none';
         results.textContent = "You lose!";
-       
-    }    
-})
+    };  
+
+    if (checkIfCorrect(userInput.value, correctAnswer) === 'equal' && clicks <= 1) {
+        guessButton.disabled = true;
+        guessButton.style.display = 'none';
+        results.textContent = 'Great Job! You win!';
+    };   
+});
 
 retryButton.addEventListener('click', () => {
     guessButton.disabled = false;
+    guessButton.style.display = 'block';
     results.textContent = '';
-    
-})
+    clicks = 3;
+    correctAnswer = Math.round(Math.random() * 20);
+});
+
