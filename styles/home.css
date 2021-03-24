@@ -1,1 +1,12 @@
-/* add home page styles here */
+#buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+#guess {
+    margin: 5px;
+}
+
+#retry {
+    margin: 5px;
+}
