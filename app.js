@@ -16,6 +16,7 @@ let correctAnswer = Math.round(Math.random() * 20);
 guessButton.addEventListener('click', () => {
     clicks--;
     console.log(correctAnswer);
+
     if (checkIfCorrect(userInput.value, correctAnswer) === 'less than') {
         results.textContent = `The answer is less than that! You have ${clicks} tries left!`;
     };
@@ -28,6 +29,8 @@ guessButton.addEventListener('click', () => {
         guessButton.style.display = 'none';
         retryButton.style.display = 'block';
         results.textContent = 'Great Job! You win!';
+        main.classList.add('correct');
+
     };
 
     if (clicks < 1) {
@@ -35,14 +38,13 @@ guessButton.addEventListener('click', () => {
         retryButton.style.display = 'block';
         results.textContent = "You lose!";
         main.classList.add('wrong');
-        wrongText.classList.remove('hidden');
+        
     };  
 
     if (checkIfCorrect(userInput.value, correctAnswer) === 'equal' && clicks <= 1) {
         guessButton.style.display = 'none';
         retryButton.style.display = 'block';
         main.classList.add('wrong');
-        wrongText.classList.remove('hidden');
         results.textContent = 'Great Job! You win!';
     };   
 });
@@ -53,8 +55,9 @@ retryButton.addEventListener('click', () => {
     retryButton.style.display = 'none';
     results.textContent = '';
     main.classList.remove('wrong');
+    main.classList.remove('correct');
     wrongText.classList.add('hidden');
-    clicks = 3;
+    clicks = 5;
     correctAnswer = Math.round(Math.random() * 20);
 });
 

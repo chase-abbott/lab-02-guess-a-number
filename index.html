@@ -9,22 +9,24 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <main id="main">
         <section>
-        <div id="instructions">
-            <div id="instructions-line-1"> Guess a number between 1 and 20! </div>
-            <div id="instructions-line-2">Be careful, you only have 5 guesses! </div>
-         </div>
-        <input type="number" id="user-input">
-        <div id="buttons">
-            <button id="guess">Guess</button>
-            <button id="retry" class="hidden">Try Again!</button>
-        </div>
-        <div id="results"></div>
+            <div id="instructions">
+                <div id="instructions-line-1"> Guess a number between 1 and 20! </div>
+                <div id="instructions-line-2">Be careful, you only have 5 guesses! </div>
+            </div>
+            <input type="number" id="user-input">
+            <div id="buttons">
+                <button id="guess">Guess</button>
+                <button id="retry" class="hidden">Try Again!</button>
+            </div>
+            <div id="results"></div>
         </section>  
     <h1 class="hidden" id="wrong-text"> WRONG! </h1>
     </main>

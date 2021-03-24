@@ -2,6 +2,17 @@ h1 {
     font-size: 200px;
 }
 
+button {
+    margin: 5px;
+    border-radius: 5px;
+    font-family: 'Cabin', sans-serif;  
+    background-color: hsla(135, 65%, 98%, 1); 
+}
+
+button:hover {
+    background-color: #e25822;
+}
+
 input {
     margin: 10px;
 }
@@ -18,8 +29,14 @@ input {
     --color5: red;
 }
 
-
-#buttons {
-    margin: 10px;
+.correct {
+    --color1: green;
+    --color2: green;
+    --color3: green;
+    --color4: green;
+    --color5: green; 
 }
+
+
+
 

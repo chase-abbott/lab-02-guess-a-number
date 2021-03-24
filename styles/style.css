@@ -11,14 +11,14 @@ body {
     --color2: hsla(135, 65%, 98%, 1);
     --color3: hsla(315, 37%, 86%, 1);
     --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1);
+    --color5: #EABE7C;
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
     --gutter: 30px;
     --footer-height: 25px;
     
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Cabin', sans-serif;
     background-color: var(--color2);
 }
 
@@ -32,6 +32,7 @@ main {
 }
 
 section {
+    border-radius: 10px;
     background-color: var(--color5);
     width: 1000px;
     max-width: 50%;
@@ -44,6 +45,8 @@ section {
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
     border: solid 2px var(--color1);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 header {
