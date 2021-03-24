@@ -20,7 +20,7 @@
     -How?
 5) Div that is  with a correct or incorrect answer
 ### Stretch
-               1) Button to reset the game
+1) Button to reset the game
     -How? addEventListener to html <button>
 
 
@@ -31,9 +31,11 @@ let clicks = 5;
 1) Generate random number
     -How? Math.round(Math.random * 20)
 2) What happens when user clicks?
-    -Change the number of clicks left
-        -How?
     -Compare input to random number
         -How?
     -Increment guesses left
         -How? 'clicks--'
+    - Communicate if guess is correct
+        -How?
+    -Comunicate how many guesses left
+        -How? div.textContent = clicks
