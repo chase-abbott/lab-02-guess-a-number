@@ -13,27 +13,21 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
-    </header>
-    <main>
-        <div id="instructions"> Guess a number between 1 and 20! 
-            Be careful, you only have 3 guesses!
-        </div>
+    <main id="main">
+        <section>
+        <div id="instructions">
+            <div id="instructions-line-1"> Guess a number between 1 and 20! </div>
+            <div id="instructions-line-2">Be careful, you only have 5 guesses! </div>
+         </div>
         <input type="number" id="user-input">
-        <section id="buttons">
+        <div id="buttons">
             <button id="guess">Guess</button>
-            <button id="retry">Try Again!</button>
-        </section>
+            <button id="retry" class="hidden">Try Again!</button>
+        </div>
         <div id="results"></div>
-        
+        </section>  
+    <h1 class="hidden" id="wrong-text"> WRONG! </h1>
     </main>
-    <footer>
-
-    </footer>
-
     <script type="module" src="app.js"></script>
 </body>
 

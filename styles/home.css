@@ -1,12 +1,25 @@
+h1 {
+    font-size: 200px;
+}
+
+input {
+    margin: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrong {
+    --color1: red;
+    --color2: red;
+    --color3: red;
+    --color4: red;
+    --color5: red;
+}
+
+
 #buttons {
-    display: flex;
-    flex-direction: row;
+    margin: 10px;
 }
 
-#guess {
-    margin: 5px;
-}
-
-#retry {
-    margin: 5px;
-}
