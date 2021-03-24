@@ -8,9 +8,11 @@ const main = document.getElementById('main');
 const wrongText = document.getElementById('wrong-text');
 
 
+
 // initialize state
 let clicks = 5;
 let correctAnswer = Math.round(Math.random() * 20);
+
 
 // set event listeners to update state and DOM
 guessButton.addEventListener('click', () => {
@@ -30,7 +32,6 @@ guessButton.addEventListener('click', () => {
         retryButton.style.display = 'block';
         results.textContent = 'Great Job! You win!';
         main.classList.add('correct');
-
     };
 
     if (clicks < 1) {
@@ -50,14 +51,15 @@ guessButton.addEventListener('click', () => {
 });
 
 retryButton.addEventListener('click', () => {
+    clicks = 5;
+    correctAnswer = Math.round(Math.random() * 20);
     // location.reload(); can be used instead but reloads the page and feels really slow
     guessButton.style.display = 'block';
     retryButton.style.display = 'none';
+    userInput.value = '';
     results.textContent = '';
     main.classList.remove('wrong');
     main.classList.remove('correct');
     wrongText.classList.add('hidden');
-    clicks = 5;
-    correctAnswer = Math.round(Math.random() * 20);
 });
 
