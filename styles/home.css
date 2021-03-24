@@ -1,1 +1,42 @@
-/* add home page styles here */
+h1 {
+    font-size: 200px;
+}
+
+button {
+    margin: 5px;
+    border-radius: 5px;
+    font-family: 'Cabin', sans-serif;  
+    background-color: hsla(135, 65%, 98%, 1); 
+}
+
+button:hover {
+    background-color: #e25822;
+}
+
+input {
+    margin: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.wrong {
+    --color1: red;
+    --color2: red;
+    --color3: red;
+    --color4: red;
+    --color5: red;
+}
+
+.correct {
+    --color1: green;
+    --color2: green;
+    --color3: green;
+    --color4: green;
+    --color5: green; 
+}
+
+
+
+
