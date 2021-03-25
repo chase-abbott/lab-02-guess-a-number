@@ -15,6 +15,7 @@ button:hover {
 
 input {
     margin: 10px;
+    border: inset;
 }
 
 .hidden {

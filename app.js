@@ -16,7 +16,6 @@ let correctAnswer = Math.ceil(Math.random() * 20);
 guessButton.addEventListener('click', () => {
     clicks--;
     console.log(correctAnswer);
-
     if (checkIfCorrect(userInput.value, correctAnswer) === 'equal') {
         guessButton.style.display = 'none';
         retryButton.style.display = 'block';
